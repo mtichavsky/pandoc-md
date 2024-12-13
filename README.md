@@ -4,7 +4,7 @@ This script converts .md files to .html files through utility called *[pandoc](h
 
 Also contains a bonus: there's a section on converting markdown to PDF (not part of the script), which I use extensively for school projects.
 
-## Usage:
+## Usage
 
 ```bash
     pandoc-md [options] [paths]
@@ -27,7 +27,9 @@ OPTIONAL OPTIONS
 If you keep using the same style file for the most of your html files, you can set an environment variable `PANDOC_MD_STYLE` to contain a path to that script. The path in `PANDOC_MD_STYLE` will be used by default (that is when you don't use `-s` option).
 
 
-## LaTeX
+## Other unrealated notes on similar topic
+
+### Markdown to PDF
 
 Unrelated to this script, more like a note to self, this is how I convert .md files to PDF:
 
@@ -66,4 +68,16 @@ urlstyle: tt
 ```
 
 Of course, you can ignore this option if you're happy with the default style.
+
+### Jupyter notebooks to PDF
+
+To be able to convert Jupyter notebooks to PDFs on Fedora, you need additional LaTeX
+packages (additional to the ones mentioned in YAML file in the previous section):
+
+- texlive-eurosym # Jupyter
+- texlive-tcolorbox # Jupyter
+- texlive-upquote # Jupyter
+- texlive-titling # Jupyter
+- texlive-ulem # Jupyter
+- texlive-soul # Jupyter
 
